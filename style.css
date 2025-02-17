@@ -304,10 +304,6 @@ footer{
     .contacts{
         height: auto;
     }
-    footer{
-        height: 150px;
-    }
-
     .head .nav {
         margin-top: 15px;
         width: 100%;
@@ -381,14 +377,3 @@ footer{
         grid-template-columns: 1fr;
     }
 }
-
-/* Animation Adjustments for Mobile */
-/* @media (hover: none) {
-    .head .nav a:hover,
-    .icon:hover,
-    .icon1:hover {
-        transform: none;
-        color: inherit;
-        text-shadow: none;
-    }
-} */
