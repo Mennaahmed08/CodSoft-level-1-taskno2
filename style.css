@@ -1,0 +1,499 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --backgroundcolor:#212121 ;
+    --backgroundcolor-2:#4B164C;
+    --font-color:#cb89a4;
+    --font-color2:#a55778;
+    --color-1:#fbf5e5e1;
+    --font-family-1:"Kodchasan", serif;
+    --font-family-2:"MuseoModerno", serif;
+    --font-family-3:"Mouse Memoirs", serif;
+    --font-family-4:"SUSE", serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--backgroundcolor);
+}
+/* nav */
+.head{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+}
+.head .head-name{
+    font-family: var(--font-family-1);
+    font-size: 26px;
+    color: var(--color-1);
+    cursor: pointer;
+    transition: .4s;
+}
+.head .head-name:hover{
+    text-shadow: 0px 0px 10px var(--color-1);
+}
+.head .head-name .change-color{
+    color: var(--font-color2);
+}
+.head .head-name .change-color:hover{
+    text-shadow: 0px 0px 10px var(--font-color2);
+}
+.head .nav a{
+    text-decoration: none;
+    color: var(--color-1);
+    font-family: var(--font-family-1);
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.head .nav a:hover{
+    color: var(--font-color2);
+    text-shadow: 0px 0px 10px var(--font-color2);
+}
+.head .nav .a-1{
+    color: var(--font-color2);
+    text-shadow: 0px 0px 10px var(--font-color2);
+}
+/* about */
+.about-me{
+    width: 100%;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    font-family: var(--font-family-4);
+    margin-top: 150px;
+    padding: 0px 20px;
+}
+.about-me .details{
+    width: 100%;
+    max-width: 650px;
+    line-height: 35px;
+}
+.about-me .details .about-head{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-1);
+}
+.about-me .details .head-animation{
+    font-size: 40px;
+    margin-top: 7px;
+    width: 100%;
+    max-width: 493px;
+    color: var(--color-1);
+    display: inline-block;
+    border-right: 3px solid var(--font-color2);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40,end) infinite, cursor .75s step-end infinite;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+        color: var(--color-1);
+        text-shadow: none;
+    }
+    to{
+        width: 100%;
+        max-width: 493px;
+        color: var(--font-color2);
+        text-shadow: 0px 0px 10px var(--font-color2);
+    }
+}
+@keyframes cursor {
+    from{
+        border-color: transparent;
+    }
+    to{
+        border-color: var(--font-color2);
+    }
+}
+.about-me .details .about-p{
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--color-1);
+}
+.change-color{
+    color: var(--font-color2);
+    font-weight: 600;
+}
+.about-me img{
+    width: 100%;
+    max-width: 250px;
+    float: right;
+    border-radius: 50%;
+    box-shadow: none;
+    animation: shadow 1s ease-in-out infinite alternate;
+}
+@keyframes shadow {
+    from{
+        box-shadow: 1px 1px 10px 10px var(--font-color2);
+    }
+    to{
+        box-shadow: 1px 1px 10px 20px var(--font-color2);
+    }
+}
+/* skills */
+.my-skills{
+    width: 100%;
+    height: 550px;
+    padding: 85px 0px;
+    margin-top: 80px;
+    display: grid;
+    justify-content: center;
+}
+.header1{
+    color: var(--color-1);
+    font-family: var(--font-family-1);
+    font-size: 40px;
+    cursor: pointer;
+    transition: .4s;
+    display: inline-block;
+    text-align: center;
+}
+.header1:hover{
+    text-shadow: 0px 0px 10px var(--color-1);
+}
+.change-color:hover{
+    text-shadow: 0px 0px 10px var(--font-color2);
+    cursor: pointer;
+}
+.circles{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-template-rows: repeat(2,150px);
+    padding-left: 110px;
+}
+.icon{
+    font-size: 40px;
+    margin-top: 50px;
+    color: var(--color-1);
+    animation: scale 1s ease-in-out infinite alternate;
+    cursor: pointer;
+}
+@keyframes scale {
+    from{
+        transform: scale(1);
+        text-shadow: 0;
+    }
+    to{
+        color: var(--font-color2);
+        text-shadow: 0px 0px 10px var(--font-color2);
+        transform: scale(1.4);
+    }
+    
+}
+.phones .circle-2{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.icon2{
+    font-size: 20px;
+    color: var(--color-1);
+    cursor: pointer;
+    transition: .4s;
+}
+.icon2:hover{
+    color: var(--font-color2);
+    text-shadow:0px 0px 10px var(--font-color2);
+    transform: scale(1.2);
+}
+/* project */
+.my-project{
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}  
+.videos{
+    display: grid;
+    grid-template-columns: repeat(3,250px);
+    grid-template-rows: repeat(1, 150px);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px; 
+    padding-top: 150px;
+}
+.video1{
+    border: 1px solid var(--font-color2);
+    border-radius: 25px;
+    height: 350px;
+    display: grid;
+    justify-content: space-between;
+    box-shadow: 1px 1px 10px 0px var(--font-color2);
+    animation: box-shadow 1s ease-in-out  infinite alternate ;
+}
+@keyframes box-shadow {
+    to{
+        box-shadow: 1px 1px 10px 10px var(--font-color2) ;
+    }
+    
+}
+.videos .video1 img{
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.project-p{
+    color: var(--color-1);
+    font-family: var(--font-family-4);
+    padding: 10px;
+    font-size: 16px;
+}
+.flex1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: self-end;
+    padding: 10px;  
+}
+.icon3{
+    font-size: 18px;
+    color: var(--color-1);
+    transition: .4s;
+    cursor: pointer;
+}
+.icon3:hover{
+    color: var(--font-color2);
+    text-shadow: 0px 0px 10px var(--font-color2);
+}
+.flex1 .flex-small a{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--color-1);
+    font-family: var(--font-family-1);
+    cursor: pointer;
+    transition: .4s;
+}
+.flex1 .flex-small a:hover{
+    color: var(--font-color2);
+    text-shadow: 0px 0px 10px var(--font-color2);
+}
+/*contact*/
+.contacts{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 30px;
+}
+.header{
+    color: var(--color-1);
+    font-size: 40px;
+    font-family: var(--font-family-1);
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 40px;
+}
+.header:hover{
+    text-shadow: 0px 0px 10px var(--color-1);
+}
+.icon1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: var(--color-1);
+    padding-right: 50px;
+    cursor: pointer;
+    transition: .4s;
+}
+.icon1:hover{
+    color: var(--font-color2);
+    text-shadow: 0px 0px 10px var(--font-color2);
+    transform: scale(1.2);
+}
+/* footer */
+footer{
+    text-align: center;
+    height: 20px;
+    color: var(--color-1);
+    font-family: var(--font-family-1);
+}
+pre{
+    font-family: var(--font-family-4);
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .circles {
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: repeat(1, 150px);
+        padding-left: 0;
+        text-align: center;
+    }
+    .videos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    /* Tablet Styles */
+    .about-me {
+        flex-direction: column;
+        height: auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .about-me .details {
+        margin-bottom: 40px;
+    }
+
+    .about-me img {
+        margin: 0 auto;
+    }
+
+    .circles {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(2, 150px);
+        padding-left: 0;
+        gap: 30px;
+    }
+
+    .videos {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+    .video1 {
+        height: auto;
+    }
+    .phones .circle-2{
+        justify-content: center;
+    }
+    .contacts {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+    .flex1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .flex1 .flex-small {
+        margin-top: 10px;
+    }
+
+
+    .contacts .header {
+        margin-bottom: 30px;
+    }
+    .icon1{
+        padding: 0;
+    }
+    .video11{
+        margin-top: -45px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile Styles */
+    .head {
+        justify-content: center;
+        padding: 10px;
+    }
+    .contacts{
+        height: auto;
+    }
+    .head .nav {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about-me {
+        margin-top: 80px;
+        padding: 0 15px;
+    }
+
+    .about-me .details .head-animation {
+        font-size: 30px;
+    }
+
+    .my-skills {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .circles {
+        grid-template-columns: repeat(2, 100px);
+        gap: 20px;
+    }
+
+    .icon {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    .videos {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        padding-top:20px;
+    }
+
+    .header1, .header {
+        font-size: 32px;
+    }
+    .icon1 {
+        font-size: 24px;
+    }
+    .videos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .video1 {
+        height: auto;
+    }
+    .flex1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .flex1 .flex-small {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Small Mobile Adjustments */
+    .about-me .details .head-animation {
+        font-size: 24px;
+    }
+
+    .about-me .details .about-p {
+        font-size: 16px;
+    }
+
+    .circles {
+        grid-template-columns: repeat(2, 80px);
+        grid-template-rows: repeat(3, 80px);
+        justify-content: center;
+        text-align: center;
+    }
+    .icon {
+        font-size: 24px;
+    }
+
+    .videos {
+        grid-template-columns: 1fr;
+    }
+}
